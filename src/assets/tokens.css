@@ -1,0 +1,148 @@
+/*
+ * WebPet design tokens — the ONLY place colours are defined.
+ * Components reference these via Tailwind utilities (bg-surface, text-text-muted…)
+ * or var(--color-…). Light values live in @theme; dark overrides follow.
+ */
+@theme static {
+  /* Backgrounds & surfaces */
+  --color-background: #fff9ef;
+  --color-background-alt: #f7f1e7;
+  --color-surface: #fffdf8;
+  --color-surface-hover: #faf3e8;
+  --color-surface-active: #f2ebdd;
+
+  /* Brand */
+  --color-primary: #7faf8b;
+  --color-primary-hover: #6e9d7b;
+  --color-primary-dark: #527a61;
+  --color-text-on-primary: #fffdf8;
+  --color-secondary: #f4b8a4;
+  --color-secondary-hover: #e9a28b;
+  --color-text-on-secondary: #3f3a34;
+
+  /* Magical accents (use sparingly) */
+  --color-accent-blue: #9bc9d8;
+  --color-accent-purple: #b8a7d9;
+  --color-accent-yellow: #f3d77a;
+
+  /* Text */
+  --color-text: #3f3a34;
+  --color-text-muted: #81786d;
+  --color-text-disabled: #b5ada2;
+
+  /* Borders */
+  --color-border: #e8e0d4;
+  --color-border-hover: #dcd1c2;
+  --color-border-selected: #7faf8b;
+
+  /* Status */
+  --color-health: #e98b8b;
+  --color-hunger: #e7a86b;
+  --color-happiness: #e7c85b;
+  --color-energy: #8dbdd1;
+  --color-friendship: #c49acf;
+  --color-experience: #9dba7c;
+  --color-success: #7faf8b;
+  --color-warning: #e5b85c;
+  --color-danger: #d98282;
+  --color-info: #79b7d4;
+
+  /* Rarity */
+  --color-rarity-common: #9b9b94;
+  --color-rarity-uncommon: #7faf8b;
+  --color-rarity-rare: #79b7d4;
+  --color-rarity-epic: #a993d1;
+  --color-rarity-legendary: #e5b85c;
+  --color-rarity-mythic: #d58bb7;
+
+  /* Elements */
+  --color-element-fire: #e8896b;
+  --color-element-water: #78b8d0;
+  --color-element-nature: #7faf8b;
+  --color-element-wind: #a9d4d0;
+  --color-element-light: #f3d77a;
+  --color-element-shadow: #81769f;
+  --color-element-earth: #b18a6d;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --font-sans: "Nunito Variable", ui-rounded, system-ui, sans-serif;
+}
+
+:root {
+  --color-shadow-soft: rgba(63, 58, 52, 0.08);
+  --color-shadow-raised: rgba(63, 58, 52, 0.12);
+  --color-ground-shadow: rgba(63, 58, 52, 0.12);
+  --shadow-card: 0 1px 2px var(--color-shadow-soft), 0 4px 14px var(--color-shadow-soft);
+  --shadow-raised: 0 2px 4px var(--color-shadow-soft), 0 10px 26px var(--color-shadow-raised);
+}
+
+/* Dedicated dark theme: "cozy nighttime room", not an inverted light theme. */
+:root[data-theme="dark"] {
+  --color-background: #202925;
+  --color-background-alt: #334039;
+  --color-surface: #29332e;
+  --color-surface-hover: #2f3b35;
+  --color-surface-active: #384540;
+
+  --color-primary: #91be9b;
+  --color-primary-hover: #a3cdad;
+  --color-primary-dark: #b7dac0;
+  --color-text-on-primary: #1c2420;
+  --color-secondary: #f4b8a4;
+  --color-secondary-hover: #e9a28b;
+  --color-text-on-secondary: #3f3a34;
+
+  --color-text: #f4f0e7;
+  --color-text-muted: #b7b2a8;
+  --color-text-disabled: #7f8a82;
+
+  --color-border: #3c4942;
+  --color-border-hover: #4b5b52;
+  --color-border-selected: #91be9b;
+
+  --color-shadow-soft: rgba(0, 0, 0, 0.22);
+  --color-shadow-raised: rgba(0, 0, 0, 0.32);
+  --color-ground-shadow: rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 1px 2px var(--color-shadow-soft), 0 4px 14px var(--color-shadow-soft);
+  --shadow-raised: 0 2px 4px var(--color-shadow-soft), 0 10px 26px var(--color-shadow-raised);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --color-background: #202925;
+  --color-background-alt: #334039;
+  --color-surface: #29332e;
+  --color-surface-hover: #2f3b35;
+  --color-surface-active: #384540;
+
+  --color-primary: #91be9b;
+  --color-primary-hover: #a3cdad;
+  --color-primary-dark: #b7dac0;
+  --color-text-on-primary: #1c2420;
+  --color-secondary: #f4b8a4;
+  --color-secondary-hover: #e9a28b;
+  --color-text-on-secondary: #3f3a34;
+
+  --color-text: #f4f0e7;
+  --color-text-muted: #b7b2a8;
+  --color-text-disabled: #7f8a82;
+
+  --color-border: #3c4942;
+  --color-border-hover: #4b5b52;
+  --color-border-selected: #91be9b;
+
+  --color-shadow-soft: rgba(0, 0, 0, 0.22);
+  --color-shadow-raised: rgba(0, 0, 0, 0.32);
+  --color-ground-shadow: rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 1px 2px var(--color-shadow-soft), 0 4px 14px var(--color-shadow-soft);
+  --shadow-raised: 0 2px 4px var(--color-shadow-soft), 0 10px 26px var(--color-shadow-raised);
+}
+}
+
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-raised { box-shadow: var(--shadow-raised); }

@@ -1,0 +1,36 @@
+{
+  "name": "webpet",
+  "version": "0.5.0",
+  "description": "WebPet - a mysterious egg is waiting in your browser",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && vite build --config vite.content.config.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "TZ=UTC tsx scripts/check-generation.ts",
+    "tune": "TZ=UTC tsx scripts/tune-adventure.ts",
+    "smoke": "TZ=UTC tsx scripts/smoke-ui.tsx"
+  },
+  "private": "true",
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/nunito": "^5.3.0",
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/chrome": "^0.3.4",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.1",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}
